@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: ms-stats
+  namespace: ms-sample
+  labels:
+    app: ms-stats
+spec:
+  selector:
+    matchLabels:
+      app: ms-stats
+  template:
+    metadata:
+      labels:
+        app: ms-stats
+    spec:
+      containers:
+      - name: monitor-sender
+        image: 10.157.1.216:5000/monitor-sender:v1
+        ports:
+        - containerPort: 5555
+      - name: receiver-logger
+        image: 10.157.1.216:5000/receiver-logger:v1
+        env: 
+        - name: FILE_PATH
+          value: "/tmp/test.log"
+
