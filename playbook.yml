@@ -1,0 +1,12 @@
+---
+- name: Login to cluster
+  hosts: eks-cluster
+
+  tasks:
+  - name: Copy deployment.yaml
+    copy:
+      src: deployment.yml
+      dest: deployment.yml
+  - name: Kubernetes Deployment
+    shell: cat deployment.yml | kubectl apply -f - 
+
