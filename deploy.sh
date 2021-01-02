@@ -2,7 +2,7 @@
 
 # Configuration for deployment
 
-MONITOR_SENDER_IMAGE=10.157.1.216:5000/monitor-sender:v1-5-g3d1b170
+MONITOR_SENDER_IMAGE=10.157.1.216:5000/monitor-sender:v1-7-gf3e8f3e
 RECEIVER_LOGGER_IMAGE=10.157.1.216:5000/receiver-logger:v1-2-g0d265ac
 RECEIVER_LOGGER_FILE_PATH=/tmp/log_path.txt
 OVERLAY_PATH=`pwd`/ms-kustomize/overlay
