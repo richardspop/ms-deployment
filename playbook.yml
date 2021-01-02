@@ -5,8 +5,8 @@
   tasks:
   - name: Copy deployment.yaml
     copy:
-      src: deployment.yml
-      dest: deployment.yml
+      src: deployment.yaml
+      dest: deployment.yaml
   - name: Kubernetes Deployment
-    shell: cat deployment.yml | kubectl apply -f - 
+    shell: cat deployment.yaml | kubectl apply -f - 
 
