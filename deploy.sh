@@ -3,7 +3,7 @@
 # Configuration for deployment
 
 MONITOR_SENDER_IMAGE=10.157.1.216:5000/monitor-sender:v1-7-gf3e8f3e
-RECEIVER_LOGGER_IMAGE=10.157.1.216:5000/receiver-logger:v1-6-gfe0905b
+RECEIVER_LOGGER_IMAGE=10.157.1.216:5000/receiver-logger:v1-8-g99a4f14
 RECEIVER_LOGGER_FILE_PATH=/tmp/log_path.txt
 OVERLAY_PATH=`pwd`/ms-kustomize/overlay
 PATCH_FILE=${OVERLAY_PATH}/DaemonSet.yaml
